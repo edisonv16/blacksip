@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Formulario } from 'src/app/interfaces/formulario';
+import {FormularioService} from '../../services/formulario.service';
 
 @Component({
   selector: 'app-home',
@@ -9,9 +11,15 @@ export class HomeComponent implements OnInit {
 
   checked = true;
 
-  constructor() {
-  }
+  constructor(private formularioService: FormularioService) {}
 
   ngOnInit(): void {
-  }  
+  } 
+  
+  getAlldatos(){
+    this.formularioService.getAlldatos()
+    .subscribe ( data  =>{
+      console.log(data);
+    });
+  }
 }
