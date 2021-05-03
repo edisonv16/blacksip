@@ -1,0 +1,25 @@
+<section>
+    <app-title
+    [clase] ="'title_product'"
+    [titleName] ="'Resumen de la orden'"
+    ></app-title>
+    <div class="row productos" *ngFor="let producto of productos">
+        <div class="col-3">
+            <img [src]="producto.image" [alt]="producto.name" class="w-100">
+        </div>
+        <div class="col-6">
+            <p>{{producto.name | lowercase }}</p>
+        </div>
+        <div class="col-3">
+            <p class="small">{{producto.price }}</p>
+        </div>
+    </div>
+    <div class="subtotal">
+      <p>Subtotal envio</p>
+      <p>$13,974 a Calcular</p>
+    </div>
+    <div class="total">
+      <p>Total</p>
+      <p>$13.974</p>
+    </div>
+</section>

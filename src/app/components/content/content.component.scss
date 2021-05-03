@@ -1,0 +1,14 @@
+.productos{
+    border:1px solid gray;
+    border-bottom: none;
+    display: flex;
+    margin:0 auto;
+    width: 100%;
+    align-items: center;
+    &:nth-last-of-type(3n){
+        border-bottom: 1px solid gray;
+    }
+}
+.title_product{
+    background-color: gray;
+}

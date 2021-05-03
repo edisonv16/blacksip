@@ -1,0 +1,108 @@
+<form
+(ngSubmit)="onSubmit(f)"
+#f="ngForm"
+class="row mb-4">
+  <div class="form-gruop mt-4 col-12 col-md-6">
+    <span class="text-danger error" *ngIf="f.submitted && f.controls['nombre'].errors" >Nombre Obligatorio</span>
+    <input
+      class="form-contol w-100"
+      required
+      type="text"
+      name="nombre"
+      placeholder="Nombre"
+      [(ngModel)]="usuario.nombre"/>
+  </div>
+  <div class="form-gruop mt-4 col-12 col-md-6">
+    <span class="text-danger error" *ngIf="f.submitted && f.controls['apellidos'].errors" >Apellidos Obligatorio</span>
+    <input
+    class="form-contol w-100"
+    required
+    type="text"
+    name="apellidos"
+    placeholder="Apellidos"
+    [(ngModel)]="usuario.apellido"/>
+  </div>
+  <div class="form-gruop mt-4 col-12 col-md-6">
+    <span class="text-danger error" *ngIf="f.submitted && f.controls['email'].errors" >Correo Obligatorio</span>
+    <input
+    class="form-contol w-100"
+    required
+    type="email"
+    email
+    name="email"
+    placeholder="email"
+    [(ngModel)]="usuario.email"/>
+  </div>
+  <div class="form-gruop mt-4 col-12 col-md-6">
+    <span class="text-danger error" *ngIf="f.submitted && f.controls['telefono'].errors" >Teléfono Obligatorio</span>
+    <input
+    class="form-contol w-100"
+    required
+    type="tel"
+    name="telefono"
+    placeholder="Teléfono"
+    [(ngModel)]="usuario.tel"/>
+  </div>
+  <div class="form-gruop mt-4 col-12 col-md-6">
+    <span class="text-danger error" *ngIf="f.submitted && f.controls['codigo'].errors" >codigo Obligatorio</span>
+    <input
+    class="form-contol w-100"
+    required
+    type="number"
+    name="codigo"
+    placeholder="Código Postal"
+    [(ngModel)]="usuario.code"/>
+  </div>
+  <div class="form-gruop mt-4 col-12 col-md-6">
+    <span class="text-danger error" *ngIf="f.submitted && f.controls['colonia'].errors" >colonia Obligatorio</span>
+    <input
+    class="form-contol w-100"
+    required
+    type="text"
+    name="colonia"
+    placeholder="Colonia"
+    [(ngModel)]="usuario.colonia"/>
+  </div>
+  <div class="form-gruop mt-4 col-12 col-md-6">
+    <span class="text-danger error" *ngIf="f.submitted && f.controls['region'].errors" >region Obligatorio</span>
+    <input
+    class="form-contol w-100"
+    required
+    type="text"
+    name="region"
+    placeholder="Region"
+    [(ngModel)]="usuario.region"/>
+  </div>
+  <div class="form-gruop mt-4 col-12 col-md-6">
+    <span class="text-danger error" *ngIf="f.submitted && f.controls['city'].errors" >Ciudad Obligatorio</span>
+    <input
+    class="form-contol w-100"
+    required
+    type="text"
+    name="city"
+    placeholder="city"
+    [(ngModel)]="usuario.city"/>
+  </div>
+  <div class="form-gruop mt-4 col-12 col-md-6">
+    <span class="text-danger error" *ngIf="f.submitted && f.controls['municipio'].errors" >municipio Obligatorio</span>
+    <input
+    class="form-contol w-100"
+    required
+    type="text"
+    name="municipio"
+    placeholder="municipio"
+    [(ngModel)]="usuario.municipio"/>
+  </div>
+  <div class="form-gruop mt-4 col-12 col-md-6">
+    <span class="text-danger error" *ngIf="f.submitted && f.controls['calle'].errors" >Dirreción Obligatorio</span>
+    <input
+    class="form-contol w-100"
+    required
+    type="text"
+    name="calle"
+    placeholder="calle"
+    [(ngModel)]="usuario.calle"/>
+  </div>
+  <button type="submit" class="btn btn-dark mt-4">Enviar</button>
+ 
+</form>
