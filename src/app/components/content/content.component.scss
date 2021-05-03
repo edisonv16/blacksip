@@ -4,11 +4,48 @@
     display: flex;
     margin:0 auto;
     width: 100%;
+    padding: 10px;
     align-items: center;
     &:nth-last-of-type(3n){
         border-bottom: 1px solid gray;
     }
+    .info{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: 100;
+        line-height: initial;
+        vertical-align: center;
+        margin: 0;
+    }
 }
+
 .title_product{
     background-color: gray;
+}
+.subtotal, .total{
+    height: 50px;
+    align-items: center;
+    width: 100%;
+    p{
+        width: 50%;
+        margin:0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        padding: 10px;
+        &:nth-last-of-type(2n+1){
+            text-align: right;
+            line-height: initial;
+        }
+    }
+}
+.subtotal{
+    background-color: #ccc;
+}
+.total{
+    background-color: black;
+    p{
+        color: white;
+        font-size: 12px;
+    }
 }

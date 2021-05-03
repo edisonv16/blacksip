@@ -8,17 +8,17 @@
             <img [src]="producto.image" [alt]="producto.name" class="w-100">
         </div>
         <div class="col-6">
-            <p>{{producto.name | lowercase }}</p>
+            <p class="info">{{producto.name | uppercase }}</p>
         </div>
         <div class="col-3">
-            <p class="small">{{producto.price }}</p>
+            <p class="small">{{producto.price | currency: 'COP': 'symbol-narrow': '.0-0'  }}</p>
         </div>
     </div>
-    <div class="subtotal">
+    <div class="subtotal d-flex">
       <p>Subtotal envio</p>
-      <p>$13,974 a Calcular</p>
+      <p>$13,974<br> a Calcular</p>
     </div>
-    <div class="total">
+    <div class="total d-flex">
       <p>Total</p>
       <p>$13.974</p>
     </div>
