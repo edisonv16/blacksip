@@ -1,7 +1,16 @@
-<form
-(ngSubmit)="onSubmit(f)"
-#f="ngForm"
-class="row mb-4">
+<form (ngSubmit)="contacto(f)" #f="ngForm" class="row mb-4">
+  <div class="form-group">
+    <label>Firebase Id</label>
+    <input type="text"
+    class="form-control"
+    [(ngModel)]="usuario.id"
+    name="id"
+    placeholder="firebase Id"
+    disabled="disabled">
+    <small class="form-text text-muted">
+        Este campo es auto generado
+    </small>
+</div>
   <div class="form-gruop mt-4 col-12 col-md-6">
     <span class="text-danger error" *ngIf="f.submitted && f.controls['nombre'].errors" >Nombre Obligatorio</span>
     <input
@@ -13,12 +22,12 @@ class="row mb-4">
       [(ngModel)]="usuario.nombre"/>
   </div>
   <div class="form-gruop mt-4 col-12 col-md-6">
-    <span class="text-danger error" *ngIf="f.submitted && f.controls['apellidos'].errors" >Apellidos Obligatorio</span>
+    <span class="text-danger error" *ngIf="f.submitted && f.controls['apellido'].errors" >Apellidos Obligatorio</span>
     <input
     class="form-contol w-100"
     required
     type="text"
-    name="apellidos"
+    name="apellido"
     placeholder="Apellidos"
     [(ngModel)]="usuario.apellido"/>
   </div>
@@ -34,22 +43,22 @@ class="row mb-4">
     [(ngModel)]="usuario.email"/>
   </div>
   <div class="form-gruop mt-4 col-12 col-md-6">
-    <span class="text-danger error" *ngIf="f.submitted && f.controls['telefono'].errors" >Teléfono Obligatorio</span>
+    <span class="text-danger error" *ngIf="f.submitted && f.controls['tel'].errors" >Teléfono Obligatorio</span>
     <input
     class="form-contol w-100"
     required
     type="tel"
-    name="telefono"
+    name="tel"
     placeholder="Teléfono"
     [(ngModel)]="usuario.tel"/>
   </div>
   <div class="form-gruop mt-4 col-12 col-md-6">
-    <span class="text-danger error" *ngIf="f.submitted && f.controls['codigo'].errors" >codigo Obligatorio</span>
+    <span class="text-danger error" *ngIf="f.submitted && f.controls['code'].errors" >codigo Obligatorio</span>
     <input
     class="form-contol w-100"
     required
     type="number"
-    name="codigo"
+    name="code"
     placeholder="Código Postal"
     [(ngModel)]="usuario.code"/>
   </div>

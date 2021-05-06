@@ -18,24 +18,24 @@ export class BtnComponent implements OnInit {
   }
 
   
-  createContacto(){
-    const contact = {
-      id: 0,
-      nombre:'Edison',
-      apellido: 'Ospina',
-      email:'edisonv16@hotmail.com',
-      tel: '3185735382',
-      code: '89000',
-      colonia: 'Colombia',
-      region: 'Sur america',
-      city: 'Bogotá',
-      municipio: 'cundinamarca',
-      calle:'carrera 19A#1sur-84',
-    };
-    this.formularioservice.createContacto(contact)
-    .subscribe((resp)=>{
-      console.log(resp);
-    });
-  }
+  // createContacto(){
+  //   const contact = {
+  //     id: 0,
+  //     nombre:'Edison',
+  //     apellido: 'Ospina',
+  //     email:'edisonv16@hotmail.com',
+  //     tel: '3185735382',
+  //     code: '89000',
+  //     colonia: 'Colombia',
+  //     region: 'Sur america',
+  //     city: 'Bogotá',
+  //     municipio: 'cundinamarca',
+  //     calle:'carrera 19A#1sur-84',
+  //   };
+  //   this.formularioservice.createContacto(contact)
+  //   .subscribe((resp)=>{
+  //     console.log(resp);
+  //   });
+  // }
 
 }

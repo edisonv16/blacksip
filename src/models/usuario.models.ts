@@ -11,3 +11,16 @@ export class UsuarioModel{
     municipio: string;
     calle:string;
 }
+export interface formularioModel {
+    id?: number,
+    nombre?:string,
+    apellido?: string,
+    email?:string,
+    tel?: string,
+    code?: string,
+    colonia?: string,
+    region?: string,
+    city?: string,
+    municipio?: string,
+    calle?:string,
+  }
