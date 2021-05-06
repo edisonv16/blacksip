@@ -22,9 +22,9 @@ import { ContentComponent } from './components/content/content.component';
 import { from } from 'rxjs';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { InputComponent } from './components/input/input.component';
+
 import { TitleComponent } from './components/title/title.component';
-import { BtnComponent } from './components/btn/btn.component';
+
 
 @NgModule({
   declarations: [
@@ -33,9 +33,8 @@ import { BtnComponent } from './components/btn/btn.component';
     HomeComponent,
     ProductosComponent,
     ContentComponent,
-    InputComponent,
     TitleComponent,
-    BtnComponent
+
   ],
   imports: [
     FormsModule,
