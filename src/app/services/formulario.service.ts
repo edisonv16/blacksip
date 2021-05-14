@@ -12,6 +12,12 @@ export class FormularioService {
 
   constructor(private http: HttpClient ) {}
 
+
+  getProductos(){
+    const path ='https://blackisp.herokuapp.com/products';
+    return this.http.get( path);
+  }
+
   getAlldatos(){
     const path ='https://blackisp.herokuapp.com/postalCodes/89000';
     return this.http.get<formularioModel[]>(path);

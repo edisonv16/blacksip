@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
+import { FormularioService } from 'src/app/services/formulario.service';
 
 @Component({
   selector: 'app-content',
@@ -9,16 +9,23 @@ import { HttpClient } from "@angular/common/http";
 export class ContentComponent implements OnInit {
 
   productos: any [] =[];
+  total:number;
 
-  constructor( private http: HttpClient) {
-    this.http.get('https://blackisp.herokuapp.com/products')
-      .subscribe ( (repuesta: any) =>{
-        this.productos = repuesta
-        console.log(repuesta);
-      });
-
+  constructor(
+    private productosServices: FormularioService) {
   }
   ngOnInit(): void {
+
+    this.productosServices.getProductos().subscribe ((repuesta: any) =>{
+        this.productos = repuesta;
+
+        this.total = this.productos.reduce((acc,item) =>{
+        return acc = parseInt(acc) + parseInt(item.price); 
+        },0);
+      });
+
+    //Calculamos el TOTAL 
+    
   }
 
 }
