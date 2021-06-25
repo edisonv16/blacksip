@@ -90,7 +90,7 @@
     type="text"
     name="city"
     placeholder="city"
-    [(ngModel)]="usuario.city"/>
+    [ngModel]="usuario.city"/>
   </div>
   <div class="form-gruop mt-4 col-12 col-md-6">
     <span class="text-danger error" *ngIf="f.submitted && f.controls['municipio'].errors" >municipio Obligatorio</span>
@@ -112,6 +112,20 @@
     placeholder="calle"
     [(ngModel)]="usuario.calle"/>
   </div>
+  <div class="form-gruop mt-4 col-12 col-md-6">
+    <span class="text-danger error" *ngIf="f.submitted && f.controls['calle'].errors" >Dirreción Obligatorio</span>
+    <input
+    class="form-contol w-100"
+    required
+    type="text"
+    name="calle"
+    placeholder="calle"
+    [(ngModel)]="usuario.calle"/>
+  </div>
   <button type="submit" class="btn btn-dark mt-4">Enviar</button>
+  <div class="col-12 sec-btn">
+    <button type="button" class="btn btn-dark" (click)="getAlldatos()">Libreta de Direcciones</button>
+    <mat-checkbox class="check">Utilizar como direcciónde facturación</mat-checkbox>
+  </div>
  
 </form>

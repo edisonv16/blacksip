@@ -24,6 +24,7 @@ import { from } from 'rxjs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { TitleComponent } from './components/title/title.component';
+import { ReactiveComponent } from './components/productos/reactive/reactive.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { TitleComponent } from './components/title/title.component';
     ProductosComponent,
     ContentComponent,
     TitleComponent,
+    ReactiveComponent,
 
   ],
   imports: [

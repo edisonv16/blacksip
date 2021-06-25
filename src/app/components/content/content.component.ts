@@ -16,7 +16,9 @@ export class ContentComponent implements OnInit {
   }
   ngOnInit(): void {
 
-    this.productosServices.getProductos().subscribe ((repuesta: any) =>{
+    this.productosServices.getProductos()
+    .subscribe ((repuesta: any) =>{
+        console.log(repuesta);
         this.productos = repuesta;
 
         this.total = this.productos.reduce((acc,item) =>{

@@ -20,7 +20,7 @@ export class FormularioService {
 
   getAlldatos(){
     const path ='https://blackisp.herokuapp.com/postalCodes/89000';
-    return this.http.get<formularioModel[]>(path);
+    return this.http.get<UsuarioModel[]>(path);
   }
   
   createUsuario(usuario: UsuarioModel){
@@ -34,18 +34,4 @@ export class FormularioService {
       })
     )
   }
-}
-
-export interface formularioModel {
-  id?: number,
-  nombre?:string,
-  apellido?: string,
-  email?:string,
-  tel?: string,
-  code?: string,
-  colonia?: string,
-  region?: string,
-  city?: string,
-  municipio?: string,
-  calle?:string,
 }
